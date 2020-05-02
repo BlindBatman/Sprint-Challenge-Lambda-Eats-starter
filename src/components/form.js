@@ -117,6 +117,9 @@ export default function Form() {
             onChange={watchedChange}
             data-cy="name"
           />
+          {errors.name.length > 0 ? (
+            <p className="error">{errors.name}</p>
+          ) : null}
         </label>
         <label htmlFor="size">
           Pizza size:
@@ -150,7 +153,7 @@ export default function Form() {
           />
         </label>
         <button data-cy="Submit" disabled={buttonDisabled}>
-          Submit
+          Place Order
         </button>
 
         <pre>{JSON.stringify(post, null, 2)}</pre>

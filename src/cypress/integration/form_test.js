@@ -11,5 +11,6 @@ describe("test our form inputs", function () {
     cy.get('[data-cy="name"]').type("s");
     cy.get('[data-cy="Sausage"]').check().should("be.checked");
     cy.get('[data-cy="Submit"]').click();
+    //meant to fail to test validation of name input
   });
 });
